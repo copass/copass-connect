@@ -1,0 +1,4 @@
+Copass Connect
+==============
+
+License GPL
