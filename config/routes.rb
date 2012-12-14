@@ -1,4 +1,5 @@
 CopassConnect::Application.routes.draw do
+  match 'faq' => 'home#faq', via: :get, :as => 'faq'
   authenticated :user do
     root :to => 'home#index'
   end
