@@ -1,6 +1,8 @@
 CopassConnect::Application.routes.draw do
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+
   match 'faq' => 'home#faq', via: :get, :as => 'faq'
-  match 'contact' => 'home#contact', via: :get, :as => 'contact'
   authenticated :user do
     root :to => 'home#index'
   end

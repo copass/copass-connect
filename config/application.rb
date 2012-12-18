@@ -18,6 +18,17 @@ end
 module CopassConnect
   class Application < Rails::Application
 
+    # config for mail
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => "587",
+      :domain               => "gmail.com",
+      :user_name            => "coworfing@gmail.com",
+      :password             => "C0w0rf1ng",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       
