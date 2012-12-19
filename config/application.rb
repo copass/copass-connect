@@ -21,7 +21,7 @@ module CopassConnect
     # config for mail
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
-      :port                 => "587",
+      :port                 => 587,
       :domain               => "gmail.com",
       :user_name            => "coworfing@gmail.com",
       :password             => "C0w0rf1ng",
@@ -29,6 +29,9 @@ module CopassConnect
       :enable_starttls_auto => true
     }
 
+    config.action_mailer.default_url_options = {
+        :host => "gmail.com"
+    }
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       
