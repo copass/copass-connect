@@ -1,5 +1,5 @@
 ul.nav
-  li 
+  li
     = link_to 'Home'
   li
     = link_to 'Network'
@@ -18,4 +18,6 @@ ul.nav
       = link_to 'Edit account', edit_user_registration_path
   - else
     li
-      = link_to 'Join the network', new_user_registration_path
+      = link_to 'Join the network', new_coworker_registration_path
+    li
+      = link_to 'Add a place', new_place_registration_path

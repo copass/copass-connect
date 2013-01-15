@@ -7,5 +7,12 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
-  
+
+  validates :name, :presence => true,
+   :uniqueness => {:allow_blank => true},
+   :format => {:with => /^\w+[\w\s:?']+$/i, :allow_blank => true}
+
+  def email_required?
+    false
+  end
 end
